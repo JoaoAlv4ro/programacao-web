@@ -10,9 +10,11 @@ export class CatalogoFilmes {
     public adicionarFilme(filme: Filme): void {
         if (filme.avaliacaoPublico !== undefined) {
             if (filme.avaliacaoPublico < 0 || filme.avaliacaoPublico > 10) {
-                throw new Error("A avaliação ser de entre 0 a 10")
+                throw new Error("A avaliação precisa ser de entre 0 a 10");
             }
         }
+
+        this.filmes.push(filme);
     }
 
     public listarFilmes(): Filme[] {
@@ -28,10 +30,8 @@ export class CatalogoFilmes {
     }
 
     public buscarPorGenero(genero: GeneroFilme): Filme[] {
-        const termo = genero.trim().toLowerCase();
-
         return this.filmes.filter(
-            (filme) => filme.genero.toLowerCase() ===termo
+            (filme) => filme.genero === genero
         )
     }
 
@@ -52,9 +52,15 @@ export class CatalogoFilmes {
     public ordenarPorAno(crescente: boolean = true): Filme[] {
         const copia = [...this.filmes];
 
-        return copia.sort((x,y) =>
-            crescente ? x.anoLancamento - y.anoLancamento : y.anoLancamento - x.anoLancamento
-        );
+        const filmesOrdenados = copia.sort((filmeA, filmeB) => {
+            if (crescente) {
+                return filmeA.anoLancamento - filmeB.anoLancamento;
+            } else {
+                return filmeB.anoLancamento - filmeA.anoLancamento;
+            }        
+        });
+        
+        return filmesOrdenados;
     }
 
     public ordenarPorAvaliacao(crescente: boolean = false): Filme[] {
