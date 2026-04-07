@@ -1,7 +1,7 @@
 import { Filme, GeneroFilme } from "@/core/types/filme";
 import { CatalogoFilmes } from "@/core/models/catalogoFilmes";
 import { validarFilme } from "@/core/utils/validacoes";
-import { filmesIniciais } from "@/data/filmes-store";
+import { filmesIniciais } from "@/data/filmes-data";
 
 export class CatalogoService {
     private catalogo: CatalogoFilmes;
