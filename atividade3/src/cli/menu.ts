@@ -29,8 +29,10 @@ export class MenuCLI {
             return;
         }
 
-        console.log("\n" + "=".repeat(75));
+        console.log("\n" + "=".repeat(30) + "\n");
         filmes.forEach((filme) => {
+            console.log();
+            console.log("\n" + "-".repeat(30) + "\n");
             console.log(`Título: ${filme.titulo}`);
             console.log(`Ano de Lançamento: ${filme.anoLancamento}`);
             console.log(`Gênero: ${filme.genero}`);
@@ -40,7 +42,7 @@ export class MenuCLI {
             }
         });
 
-        console.log("=".repeat(75) + "\n");
+        console.log("=".repeat(30) + "\n" + "\n");
     }
 
     // Opção 1: Adicionar filme
