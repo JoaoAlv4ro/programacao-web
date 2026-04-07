@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "gui": "next dev",
+    "cli": "ts-node src/cli/index.ts"
   },
   "dependencies": {
     "next": "16.2.2",
