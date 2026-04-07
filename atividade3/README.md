@@ -1,34 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Catálogo de Filmes - TypeScript
 
-## Getting Started
+Aplicação completa para gerenciar um catálogo de filmes, desenvolvida com **TypeScript**, **Clean Architecture** e **DDD (Domain-Driven Design)**.
 
-First, run the development server:
+A aplicação oferece **duas interfaces**:
+- **CLI**: Menu interativo no console 
+- **GUI**: Interface web moderna com React 
+
+---
+
+## 🏗️ Arquitetura
+
+O projeto segue **Clean Architecture + Domain-Driven Design**:
+
+```
+┌─────────────────────────────────────────┐
+│  Presentation Layer                     │
+│  ├─ CLI (src/cli/)                      │
+│  └─ GUI (src/app/, src/components/)     │
+├─────────────────────────────────────────┤
+│  Application Layer                      │
+│  └─ Services (src/services/)            │
+├─────────────────────────────────────────┤
+│  Domain Layer                           │
+│  ├─ Models (src/core/models/)           │
+│  ├─ Types (src/core/types/)             │
+│  └─ Business Rules (src/core/utils/)    │
+├─────────────────────────────────────────┤
+│  Infrastructure Layer                   │
+│  └─ Data Store (src/data/)              │
+└─────────────────────────────────────────┘
+```
+
+---
+
+## 🚀 Como Executar
+
+### 1️⃣ Instalação
+
+```bash
+npm install
+```
+
+### 2️⃣ Executar CLI (Menu no Console)
+
+```bash
+npm run cli
+```
+
+**Funcionalidades:**
+- ➕ Adicionar novo filme
+- 📋 Listar todos os filmes
+- 🔍 Buscar filme por título
+- 🎯 Buscar filmes por gênero
+- 📊 Ordenar por ano
+- ⭐ Ordenar por avaliação
+- 🗑️ Remover filme
+
+### 3️⃣ Executar GUI (Interface Web)
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse: **http://localhost:3000**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Funcionalidades:**
+- ✨ Design moderno com Tailwind CSS + Flowbite
+- 🎨 Ícones do Phosphor
+- 📱 Responsivo
+- ⚡ Atualização em tempo real
+- 🔍 Busca e filtros
+- 📊 Visualização em cards
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Estrutura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── cli/              # Interface de console
+├── app/              # Next.js (GUI)
+├── components/       # Componentes React
+├── core/             # Domínio
+│   ├── types/        # Tipagem
+│   ├── models/       # Classes
+│   └── utils/        # Validações
+├── services/         # Serviços
+├── data/             # Dados
+└── hooks/            # Custom Hooks
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📋 Requisitos Atendidos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [x] Tipagem TypeScript
+- [x] Interface interativa (CLI)
+- [x] Classes e objetos
+- [x] Manipulação de arrays
+- [x] Validações
+- [x] GUI moderna e responsiva com React
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🤖 Tecnologias
+
+- **TypeScript** - Tipagem
+- **React 19** / **Next.js 16** - GUI
+- **Tailwind CSS** - Estilização
+- **Flowbite** - Componentes
+- **Phosphor Icons** - Ícones
+- **Node.js** - CLI
+
+---

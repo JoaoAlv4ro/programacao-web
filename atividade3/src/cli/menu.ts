@@ -114,7 +114,7 @@ export class MenuCLI {
         const filmes = this.servico.ordenarPorAno(crescente);
         const ordem = crescente ? "Crescente" : "Decrescente";
 
-        console.log(`\n Filmes ordenados por anoa (${ordem}):`);
+        console.log(`\n Filmes ordenados por ano (${ordem}):`);
         this.exibirFilmes(filmes);
     }
 

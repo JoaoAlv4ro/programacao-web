@@ -44,7 +44,7 @@ export async function perguntarOpcao(question: string, min: number, max: number)
 
 // Função para escolher um gênero de filme a partir da lista de gêneros disponíveis
 export async function escolherGenero(): Promise<GeneroFilme> {
-    const generos = Object.values(generosFilmes);
+    const generos = generosFilmes;
 
     console.log("Gêneros disponíveis:");
     generos.forEach((genero, index) => {
