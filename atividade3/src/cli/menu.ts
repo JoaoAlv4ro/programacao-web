@@ -1,5 +1,5 @@
 import { CatalogoService } from "@/services/catalogo-service";
-import { GeneroFilme, Filme } from "@/core/types/filme";
+import { GeneroFilmes, Filme } from "@/core/types/filme";
 import { perguntar, perguntarNumero, perguntarOpcao, escolherGenero, fecharPerguntas } from "@/cli/inputs";
 
 export class MenuCLI {

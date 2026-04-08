@@ -1,5 +1,5 @@
 import * as readline from 'readline';
-import { generosFilmes, GeneroFilme } from '@/core/types/filme';
+import { generosFilmes, GeneroFilmes } from '@/core/types/filme';
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -43,7 +43,7 @@ export async function perguntarOpcao(question: string, min: number, max: number)
 }
 
 // Função para escolher um gênero de filme a partir da lista de gêneros disponíveis
-export async function escolherGenero(): Promise<GeneroFilme> {
+export async function escolherGenero(): Promise<GeneroFilmes> {
     const generos = generosFilmes;
 
     console.log("Gêneros disponíveis:");

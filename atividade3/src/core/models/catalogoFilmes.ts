@@ -1,4 +1,4 @@
-import { Filme, GeneroFilme } from "../types/filme";
+import { Filme, GeneroFilmes } from "../types/filme";
 
 export class CatalogoFilmes {
     private filmes: Filme[] = [];
@@ -29,7 +29,7 @@ export class CatalogoFilmes {
         )
     }
 
-    public buscarPorGenero(genero: GeneroFilme): Filme[] {
+    public buscarPorGenero(genero: GeneroFilmes): Filme[] {
         return this.filmes.filter(
             (filme) => filme.genero === genero
         )

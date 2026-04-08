@@ -1,4 +1,4 @@
-import { Filme, GeneroFilme } from "@/core/types/filme";
+import { Filme, GeneroFilmes } from "@/core/types/filme";
 import { CatalogoFilmes } from "@/core/models/catalogoFilmes";
 import { validarFilme } from "@/core/utils/validacoes";
 import { filmesIniciais } from "@/data/filmes-data";
@@ -39,7 +39,7 @@ export class CatalogoService {
         return this.catalogo.buscarPorTitulo(titulo);
     }
 
-    public buscarGenero(genero: GeneroFilme): Filme[] {
+    public buscarGenero(genero: GeneroFilmes): Filme[] {
         return this.catalogo.buscarPorGenero(genero);
     }
 

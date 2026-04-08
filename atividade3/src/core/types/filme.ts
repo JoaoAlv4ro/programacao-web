@@ -13,12 +13,12 @@ export const generosFilmes = [
     'Musical'
 ] as const;
 
-export type GeneroFilme = typeof generosFilmes[number];
+export type GeneroFilmes = typeof generosFilmes[number];
 
 export interface Filme {
     titulo: string;
     anoLancamento: number;
-    genero: GeneroFilme;
+    genero: GeneroFilmes;
     duracao: number; // duração em minutos
     avaliacaoPublico?: number;
 }
