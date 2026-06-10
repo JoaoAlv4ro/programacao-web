@@ -1,0 +1,3 @@
+[submodule "crud-mundo"]
+	path = crud-mundo
+	url = https://github.com/JoaoAlv4ro/crud-mundo.git
